@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Neeraj | Profile</title>
+    <link rel="shortcut icon" href="Assests/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="njProfile.css">
+</head>
+<body>
+
+    <section class="njProfile">
+
+        <div class="logo">
+            <h1>Search Your Partner</h1>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="myProfile.html">Profile</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button onclick="logout()">Logout</button></li>
+            </ul>
+        </div>
+
+        <img src="Assests/logo.png" id="logoImg" alt="">
+
+        <img src="Assests/nav.gif" onclick="navClickMeBtn()" id="navClickMeBtn" alt="">
+        <button id="closeNavBar" onclick="closeNavBar()">❌</button>
+
+        <div class="profile">
+            <img src="Assests/nj2.jpg" alt="">
+        </div>
+
+        <!-- congratulation card display after 5 sec  -->
+
+        <div id="congratsSection">
+            <video src="Assests/popupCongratsBg.mp4" autoplay disablePictureInPicture muted loop type="video/mp4" ></video>
+            <button id="closeBtn" onclick="closeCard()">❌</button>
+            <div class="text">
+                <h1>🎉 Congratulations !</h1>
+                <h2>36 गुण मिल गए</h2>
+                <h3>Made for each other ❤️</h3>
+            </div>
+
+            
+
+        </div>
+        <audio id="congratsMusic" src="Assests/Tere_Sang_Yaara _song.mp3"></audio>
+        
+
+        <div class="content">
+
+            <h1>Neeraj Kr. Poddar <img src="Assests/verify.png" alt="" id="verify"></h1>
+
+            <div class="typing-container">
+                <span id="static">I am a  </span><span id="typed-text"></span><span class="cursor">|</span>
+            </div>
+
+            <div class="btn">
+                <button id="cardShowBtn">Show His Card</button>
+                <button id="newMsgBtn" >Got New Messages (4)</button>
+                <button id="aiPhotoBtn" >Ai Generated Photo</button>
+                <button id="socialMediaBtn">Social Media Handles</button>
+            </div>
+        </div> 
+
+        <section class="password">
+
+            <div class="passwordBox">
+                <div class="securityVideo">
+                    <video src="Assests/security.mp4" muted loop autoplay></video>
+                </div>
+                <h1>Please Enter Your Secret Password <img src="Assests/password.png" alt=""  ></h1>
+                <input type="text" autocomplete="off" id="passwordInput" placeholder="Welcome Dear, Enter Your Password..."><br>
+                <button type="submit">submit</button>
+            </div>
+            
+
+            <div class="rightPassword">
+                <div class="unlockVideo">
+                    <video src="Assests/unlockPassword.mp4" muted loop autoplay></video>
+                </div>
+                <div class="rightPasswordBox">
+                    <h1>🎉 Congratulations </h1>
+                    <h2>Welcome My Dear Nautanki ❤️ </h2>
+                    <h3>You Got The Access ! </h3>
+                    <h4>Hope You Are Enjoying it...</h4>
+                </div>
+            </div>
+
+            <div class="wrongPassword">
+                <div class="lockkVideo">
+                    <video src="Assests/lockPassword.mp4" muted loop autoplay></video>
+                </div>
+                <div class="wrongPasswordBox">
+                    <h1> Wrong Password ❌ </h1>
+                    <h2>Access Denied !!!</h2>
+                    <h3>This is not for you 💔</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="socialMediaHandle">
+
+            <a href="tel:+917091661363" ><img src="Assests/social/phone.png" alt=""></a>
+
+            <a href="https://wa.me/917091661363?text=Hi%20Neeraj!%20I%20love%20your%20website%20❤️" 
+            target="_blank"><img src="Assests/social/whatsapp.png" alt=""></a>
+
+            <a href="https://www.facebook.com/neeraj.nj.927" target="_blank"><img src="Assests/social/facebook.png" alt=""></a>
+
+            <a href="https://www.instagram.com/neeraj_kr_nj?igsh=MW1lYmVwbmlycWZmdQ==" target="_blank"><img src="Assests/social/instagram.png" alt=""></a>
+
+            <a href="mailto:neerajkumar450107@gmail.com"><img src="Assests/social/gmail.png" alt=""></a>
+
+            <a href="https://www.linkedin.com/in/neeraj-kumar-poddar-005322259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="Assests/social/linkedin.png" target="_blank" alt=""></a>
+
+            <button id="closeBtnSocialMedia" >❌</button>
+        </section>
+
+        <section class="card">
+            <img src="Assests/partner_found.jpg" alt="">
+            <button id="cardCloseBtn" >❌</button>
+        </section>
+
+
+        <div class="overlay"></div>
+
+        
+
+
+    </section>
+
+    <footer >
+          <p>💌 Made with Love by Neeraj | Just for You 💖</p>
+    </footer>
+    
+    <script src="njProfile.js"></script>
+    
+</body>
+</html>

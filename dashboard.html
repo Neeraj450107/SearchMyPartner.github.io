@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ms. Apurva Sinha | Dashboard</title>
+    <link rel="shortcut icon" href="Assests/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <section class="dashboard">
+
+        <video src="Assests/dashboard_bg.mp4" type="video/mp4" muted autoplay loop  disablePictureInPicture></video>
+
+        <div class="logo">
+            <h1>Search Your Partner</h1>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="myProfile.html">Profile</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button onclick="logout()">Logout</button></li>
+            </ul>
+        </div>
+
+        <img src="Assests/nav.gif" onclick="navClickMeBtn()" id="navClickMeBtn" alt="">
+        <button id="closeNavBar" onclick="closeNavBar()">❌</button>
+
+        <img id="logoImg" src="Assests/logo.png" alt="">
+
+        <div class="profile">
+            <img src="Assests/red dress.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h1>Welcome, Ms. Apurva Sinha</h1>
+            <p>Here is the special content created just for you. Explore and enjoy!</p>
+            <button onclick="showMyCard()">Show My Card</button>
+            <button  onclick="searchMyPartner()">Search My Partner</button>
+        </div>  
+
+        <div class="baate">
+            <button onclick="kuchBaateText()">Kuch Baate</button>
+        </div>
+
+        <div class="overlay"></div>
+
+        <footer >
+          <p>💌 Made with Love by Neeraj | Just for You 💖</p>
+        </footer>
+
+    </section>
+
+       <!-- show my card section -->
+
+        <section class="card">
+            <div class="back">
+                <img src="Assests/backCard.jpg" id="backCard" alt="">
+            </div>
+            <div class="front">
+                <img src="Assests/frontCard.jpg" id="frontCard" alt="">
+            </div>
+            
+            <button id="closeBtn" onclick="closeCard()">❌</button>
+            <button id="flipCard" onclick="flipCard()">Flip Card</button>
+        </section>
+
+        <!-- Show My Kuch Baate Section  -->
+         
+
+        <div class="kuchBaate">
+            <div class="front">
+                <img src="Assests/kuchbaate1.jpg" alt="">
+            </div>
+            <div class="back">
+                <img src="Assests/kuchbaate2.jpg" alt="">
+            </div>
+
+            <button id="closeBtn" onclick="closeCard()">❌</button>
+            <button id="flipCard" onclick="flipCard()">Something More 💌</button>
+        </div>
+
+        <!-- Search My Partner section  -->
+
+        <div class="searchBtn">
+
+            <video src="Assests/seasorer.mp4" loop autoplay  muted></video>
+
+            <h1>Search Your Partner 💖</h1>
+
+            <input type="text" placeholder="Search Partner That Made Only For You..." id="searchPartnerInput" autocomplete="off">
+
+            <button id="search" type="submit" onclick="searchPartnerBtn()" ><img src="Assests/search.png"  alt=""></button>
+
+            <button id="closeBtn" onclick="closeCard()">❌</button>
+
+            <!-- searching names -->
+
+            
+            <img src="Assests/partner_found.jpg" class="foundPartner" alt="">
+           
+            <img src="Assests/partnerNot_found.jpg" class="notFoundPartner" alt="">
+
+            <audio src="Assests/Meri Aashiqui Ab Tum Hi Ho WhatsApp status__female version.mp3" id="musicPartnerFound"></audio>
+            <audio src="Assests/notFoundSong_Dil_ke_tukde.mp3" id="musicPartnerNotFound"></audio>
+            
+            
+            
+        </div>
+
+
+
+
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

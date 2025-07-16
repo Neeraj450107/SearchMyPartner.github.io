@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery | Ms. Apurva Sinha</title>
+    <link rel="shortcut icon" href="Assests/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <section class="gallery">
+        <div class="logo">
+            <h1>Search Your Partner</h1>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="myProfile.html">Profile</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button onclick="logout()">Logout</button></li>
+            </ul>
+        </div>
+
+        <img src="Assests/nav.gif" onclick="navClickMeBtn()" id="navClickMeBtn" alt="">
+        <button id="closeNavBar" onclick="closeNavBar()">❌</button>
+
+        <img src="Assests/logo.png" id="logoImg" alt="">
+
+        <!-- <audio id="bgSong" src="Assests/soulmate.mp3"></audio> -->
+        <audio id="secondMusic" src="Assests/mashup.mp3" controls></audio>
+
+        <h2>💖My Queen 👑</h2>
+
+        <!-- add photo 1 by 1  -->
+
+        <div class="wholeImg">
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/1.jpg" alt="GF Photo 1">
+              <p class="typed-text">Your smile makes my day 🌸</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/2.jpg" alt="GF Photo 1">
+              <p class="typed-text">UR smile is my favorite sunshine☀️</p>  
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/3.jpg" alt="GF Photo 1">
+              <p class="typed-text">Your eyes hold my universe. 🌌</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/4.jpg" alt="GF Photo 1">
+              <p class="typed-text">The moon is jealous of <br> how you glow.🌕</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">  
+              <img src="Assests/img/5.jpg" alt="GF Photo 1">
+              <p class="typed-text">You are the reason behind <br> my silly smiles.😄</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/6.jpg" alt="GF Photo 1">
+              <p class="typed-text">In a sea of people, I only see you.🌊</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/7.jpg" alt="GF Photo 1">
+              <p class="typed-text">You are The reason My <br> heart beats happily.❤️</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/8.jpg" alt="GF Photo 1">
+              <p class="typed-text">You are the peace <br> my soul searched for.🌸</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/9.jpg" alt="GF Photo 1">
+              <p class="typed-text">Your presence is my peace.🕊️</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/10.jpg" alt="GF Photo 1">
+              <p class="typed-text">Even the stars envy your glow.⭐</p> 
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/11.jpg" alt="GF Photo 1">
+              <p class="typed-text">You are not my option,<br> you're my priority.🎯</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/12.jpg" alt="GF Photo 1">
+              <p class="typed-text">I choose You And <br> I’ll choose you again🌍</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/13.jpg" alt="GF Photo 1">
+              <p class="typed-text">You are the chapter <br> I never want to end.📖</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/14.jpg" alt="GF Photo 1">
+              <p class="typed-text">You're the reason love feels real✨</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/15.jpg" alt="GF Photo 1">
+              <p class="typed-text">With U, even silence feels sweet🤍</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/16.jpg" alt="GF Photo 1">
+              <p class="typed-text">With You , I found <br>The love I dreamed of🌠</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/17.jpg" alt="GF Photo 1">
+              <p class="typed-text">If love had a face,<br> it would look like U🖼️</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/18.jpg" alt="GF Photo 1">
+              <p class="typed-text">Loving You , <br>My most beautiful decision🌸</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/19.jpg" alt="GF Photo 1">
+              <p class="typed-text">You are the sweetest dream I never <br> want to wake up from.💤</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/20.jpg" alt="GF Photo 1">
+              <p class="typed-text">Your laugh is my favorite sound.😄</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/21.jpg" alt="GF Photo 1">
+              <p class="typed-text">You’re my safe place <br>in a scary world.🛡️</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/22.jpg" alt="GF Photo 1">
+              <p class="typed-text">You’re not just my love,<br> you’re my destiny.🧭</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/23.jpg" alt="GF Photo 1">
+              <p class="typed-text">I fall for you every single time <br> I look at you.💞</p>
+            </div>
+
+          
+            <div class="photo" onclick="openPopup(this)">
+              <img src="Assests/img/24.jpg" alt="GF Photo 1">
+              <p class="typed-text">Every heartbeat says your name.🫀</p>
+            </div>
+
+          
+           
+        
+        </div>
+
+
+        <footer >
+          <p>💌 Made with Love by Neeraj | Just for You 💖</p>
+        </footer>
+
+    </section>
+    <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Your Partner</title>
+    <link rel="shortcut icon" href="Assests/logo1.avif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HOME PAGE -->
+
+    <section class="home">
+
+        <video src="Assests/bg.mp4" type="video/mp4"  autoplay muted loop ></video>
+
+        <div class="logo">
+            <h1>Search Your Partner</h1>
+        </div>
+
+        <div class="about">
+            <p>This is a special website created for just one person — the one who holds my heart ❤️</p>
+        </div>
+
+        <img src="Assests/logo.png" alt="">
+
+        <form id="registerForm" action="" onsubmit="return validateEmail(event)"> 
+
+            <label for="email">Enter your Email ID : </label>
+            <br><br>
+
+            <input type="email" id="email" autocomplete="off" name="email" required placeholder="Enter Valid Email ID...">
+            <br><br>
+
+            <button id="submit" type="submit">Submit</button>
+            <h2>❤️ Wish You All The Best!</h2>
+
+        </form>
+
+        <div class="overlay" ></div>
+
+        <!-- Email Verification Section -->
+
+        <div class="congratsCard">
+            <h1>Access granted ! Welcome </h1>
+            <h2>Ms. Apurva Sinha</h2>
+            <article id="para1">🎉 Congrats! You are the one I was waiting for ❤️ Thank you for being a part of my life. Your love and support mean the world to me.</article>
+            <article id="para2">Click the button below to explore the special content I have created just for you</article>
+            <button class="exploreBtn" onclick="exploreContent()"><a href="dashboard.html" type="submit">❤️ Explore ❤️</a></button>
+        </div>
+
+        <div class="sorryCard">
+            <h1 id="cross">❌</h1>
+            <h1> Access denied !</h1>
+            <h2>Unknown User</h2>
+            <article id="para1">We're sorry, but we couldn't verify your email address.</article>
+            <article id="para2">Sorry! This place is only meant for someone special.</article>
+            <button class="tryAgain" onclick="tryAgain()" type="submit"> Try Again </button>
+        </div>
+
+
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

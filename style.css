@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&family=Protest+Riot&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --bradius: 18px;
+    --bshadow: 2px 2px 10px white;
+    --border: 1px solid white;
+    --cursor: pointer;
+    --font: 'Poppins', sans-serif;
+    --font2: 'Protest Guerrilla', sans-serif;
+    --font3:"Protest Riot", sans-serif;
+    --blur: blur(10px);
+}
+
+
+
+video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.logo{
+    color: rgb(255, 4, 4);
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: var(--font3);
+    font-weight: 300;
+    font-size: 20px;
+    padding: 6px 15px;
+    letter-spacing: 1.5px;
+    border-radius: var(--bradius);
+}
+
+.logo:hover{
+    color: rgb(255, 4, 242);
+    transition: 0.4s ease-in-out;
+    box-shadow: var(--bshadow);
+    
+}
+
+p{
+    font-size: 25px;
+    font-style: var(--font2);
+    padding: 6px 15px;
+    border-radius: var(--bradius);
+    backdrop-filter: var(--blur);
+    border: var(--border);
+    max-width: 600px;
+    text-align: center;
+    transform: translate(100% , 20%);
+    color: rgb(255, 0, 238);
+    box-shadow: 2px 2px 10px black;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+img{
+    width: 200px;
+    right: 0;
+    position: absolute;
+    transform: translate(-1%, -40%);
+    cursor: pointer;
+}
+
+
+form{
+    border: var(--border);
+    box-shadow: 5px 5px 30px black;
+    padding: 20px;
+    border-radius: var(--bradius);
+    width: 400px;
+    height: 300px;
+    background-image: url(Assests/couple-pictures-aayrqyfiw5ul3poe.webp);
+    background-size: cover;
+    background-position: center;
+    right: 5%;
+    position: absolute;
+    bottom: 20%;
+    /* visibility: hidden; */
+}
+
+.formActive{
+    visibility: visible;
+    transition: 0.3s ease-in-out;
+}
+
+form label{
+    color: white;
+    font-size: 2rem;
+    font-family: "Protest Riot", sans-serif;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    margin-top: 30px;
+    position: absolute;
+}
+
+form input{
+    margin-left: 15px;
+    width: 88%;
+    padding: 5px 10px ;
+    font-size: 18px;
+    text-align: center;
+    border-radius: var(--bradius);
+    color: rgb(51, 0, 255);
+    outline: none;
+    position: relative;
+    margin-top: 20%;
+    font-family: var(--font3);
+    letter-spacing: 1.5px;
+    border: var(--border);
+
+}
+
+form button{
+    left: 40%;
+    padding: 5px 10px ;
+    font-size: 20px;
+    text-align: center;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    font-family: var(--font3);
+    color: red;
+    letter-spacing: 1px;
+    border: var(--border);
+}
+
+form button:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    box-shadow: 2px 2px 10px black;
+    transition: 0.4s ease-in-out;
+}
+
+form h2{
+    color: aqua;
+    text-align: center;
+    transform: translate(10% , 180%);
+    backdrop-filter: var(--blur);
+    width: 300px;
+    border-radius: var(--bradius);
+
+}
+
+.overlay{
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+
+}
+
+.overlayActive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+/* Email Verification Section - */
+
+.congratsCard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--bradius);
+    box-shadow: var(--bshadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px black;
+    visibility: hidden;
+}
+.congratsCardActive{
+    visibility: visible;
+    transition: 0.3s ease-in;
+}
+
+.congratsCard h1{
+    font-family: var(--font3);
+    color: rgb(0, 128, 0);
+    font-size: 2.2rem;
+    transform: translate(0, -5%);
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin-bottom: 25px;
+}
+
+.congratsCard h2{
+    font-family: var(--font);
+    color: rgb(255, 0, 0);
+    font-size: 1.8rem;
+    transform: translate(0, -25%);
+    text-align: center;
+    border: var(--border);
+    padding: 2px 10px ;
+    border-radius: var(--bradius);
+    box-shadow: 2px 2px 10px rgb(38, 0, 255);
+    backdrop-filter: var(--blur);
+    margin-bottom: 20px;
+    cursor: var(--cursor);
+    
+}
+
+.congratsCard h2:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    box-shadow: 5px 5px 20px black;
+    transition: 0.4s ease-in-out;
+}
+.congratsCard #para1{
+    font-family: var(--font);
+    width: 90%;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    transform: translate(0, -20%);
+    text-align: center;
+    margin-top: 15px;
+}
+.congratsCard #para2{
+    font-family: var(--font);
+    width: 90%;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    transform: translate(0, -40%);
+    text-align: center;
+    margin-top: 18px;
+}
+
+.congratsCard .exploreBtn{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: var(--bradius);
+    border: none;
+    background-color: rgb(4, 230, 255);
+    color: rgb(0, 0, 0);
+    cursor: var(--cursor);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-20%);
+}
+.congratsCard .exploreBtn:hover{
+    background-color: rgb(0, 128, 255);
+    color: white;
+    box-shadow: 2px 2px 10px black;
+}
+.congratsCard .exploreBtn a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sorryCard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--bradius);
+    box-shadow: var(--bshadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px black;
+    visibility: hidden;
+}
+
+.sorryCardActive{
+    visibility: visible;
+    transition: 0.3s ease-in;
+}
+
+.sorryCard #cross{
+    transform: translate(0, 10%);
+}
+.sorryCard h1{
+    font-family: var(--font3);
+    color: rgb(255, 0, 0);
+    font-size: 2.5rem;
+    transform: translate(0, -30%);
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin-bottom: 25px;
+    
+}
+.sorryCard h2{
+    font-family: var(--font);
+    color: rgb(0, 128, 0);
+    font-size: 1.8rem;
+    transform: translate(0, -40%);
+    text-align: center;
+    border: var(--border);
+    padding: 2px 10px ;
+    border-radius: var(--bradius);
+    box-shadow: 2px 2px 10px rgb(38, 0, 255);
+    backdrop-filter: var(--blur);
+    margin-bottom: 20px;
+    cursor: var(--cursor);
+    
+}
+.sorryCard h2:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+    box-shadow: 5px 5px 20px black;
+    transition: 0.4s ease-in-out;
+}
+.sorryCard #para1{
+    font-family: var(--font);
+    width: 95%;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    transform: translate(0, -80%);
+    text-align: center;
+    margin-top: 15px;
+}
+.sorryCard #para2{
+    font-family: var(--font);
+    width: 95%;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    transform: translate(0, -60%);
+    text-align: center;
+    margin-top: 15px;
+}
+.sorryCard .tryAgain{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: var(--bradius);
+    border: none;
+    background-color: rgb(4, 230, 255);
+    color: rgb(0, 0, 0);
+    cursor: var(--cursor);
+}
+    
+.sorryCard .tryAgain:hover{
+    background-color: rgb(0, 128, 255);
+    color: white;
+    box-shadow: 2px 2px 10px black;
+    transition: 0.3s ease-in-out;
+}
+
+
+@media (max-width:400px){
+    .home{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+    video{
+        width: 100%;
+        height: 100vh;
+        object-fit: fill;
+       
+        
+
+    }
+    p{
+        font-size: 15px;
+        transform: translate(10%, 200%);
+        width: 300px;
+        
+    }
+    .logo{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    img{
+        width: 90px;
+        top: 5%;
+    }
+
+    form{
+        width: 350px;
+        transform: translate(0 , 20%);
+        height: 250px;
+
+    }
+    form label{
+        font-size: 1.7rem;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+    form input{
+        width: 88%;
+        font-size: 18px;
+        margin-top: 10%;
+    }
+    form button{
+        padding: 3px 15px;
+        margin-left: -15px;
+    }
+    form h2{
+        font-size: 20px;
+        transform: translate(2% , 250%);
+    }
+    .sorryCard{
+        width: 90%;
+        height: 430px;
+        margin-top: -60px;
+    }
+    .congratsCard{
+        width: 90%;
+        height: 500px;
+        margin-top: -60px;
+    }
+}
+@media  (min-width:401px) and (max-width: 800px){
+    .home{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+    video{
+        width: 100%;
+        height: 110vh;
+        object-fit: fill;
+    }
+    p{
+        font-size: 25px;
+        transform: translate(10%, 200%);
+        max-width: 600px;
+        margin-right: 20%;
+        
+    }
+    .logo{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    img{
+        width: 150px;
+        top: 5%;
+    }
+
+    form{
+        width: 450px;
+        transform: translate(0 , 20%);
+        height: 300px;
+
+    }
+    form label{
+        font-size: 1.9rem;
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+    form input{
+        width: 88%;
+        font-size: 20px;
+        margin-top: 10%;
+    }
+    form button{
+        padding: 8px 15px;
+        margin-left: -15px;
+    }
+    form h2{
+        font-size: 25px;
+        transform: translate(18% , 250%);
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1330px){
+    .home{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+    video{
+        width: 100%;
+        height: 110vh;
+        object-fit: cover;
+    }
+    p{
+        font-size: 35px;
+        transform: translate(50%, 150%);
+        max-width: 680px;
+       margin-right: 25%;
+        
+    }
+    .logo{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+    img{
+        width: 220px;
+        top: 7%;
+    }
+
+    form{
+        width: 500px;
+        height: 300px;
+        transform: translate(0 , 20%);
+        height: 350px;
+
+    }
+    form label{
+        font-size: 2.2rem;
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    form input{
+        width: 88%;
+        font-size: 22px;
+        margin-top: 15%;
+    }
+    form button{
+        padding: 8px 15px;
+        margin-left: -15px;
+        margin-top: 20px;
+    }
+    form h2{
+        font-size: 25px;
+        transform: translate(20% , 300%);
+    }
+}

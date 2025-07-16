@@ -1,0 +1,998 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&family=Protest+Riot&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --bradius: 18px;
+    --bshadow: 2px 2px 10px white;
+    --border: 1px solid white;
+    --cursor: pointer;
+    --font: 'Poppins', sans-serif;
+    --font2: 'Protest Guerrilla', sans-serif;
+    --font3:"Protest Riot", sans-serif;
+    --blur: blur(10px);
+}
+
+video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;  
+}
+
+
+.logo{
+    
+    color: rgb(4, 255, 50);
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: var(--font3);
+    font-weight: 300;
+    font-size: 18px;
+    padding: 6px 15px;
+    letter-spacing: 1.5px;
+    border-radius: var(--bradius);
+}
+
+.logo:hover{
+    color: rgb(4, 201, 255);
+    transition: 0.4s ease-in-out;
+    box-shadow: var(--bshadow);
+    
+}
+
+#logoImg{
+    width: 200px;
+    right: 0;
+    position: absolute;
+    transform: translate(-1%, -25%);
+    cursor: pointer;
+}
+#navClickMeBtn{
+  display: none;
+}
+#closeNavBar {
+    font-size: 13px;
+    right: 2%;
+    top: 0.5%;
+    padding: 5px 10px ;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    border: var(--border);
+    display: none;
+    z-index: 1000;
+}
+
+#closeNavBar:hover{
+    box-shadow: 2px 2px 5px red;
+    transition: 0.4s ease-in-out;
+    /* background-color: aqua; */
+    border: 1px solid red;
+    scale: 1.01;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    width: 680px;
+    position: sticky;
+    transform: translate(75%, -40%);
+
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 30px;
+    transform: translate(0, 100%);
+}
+.nav ul li{
+    font-family: var(--font3);
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: white;
+    cursor: var(--cursor);
+    border-radius: var(--bradius);
+    border: var(--border);
+    background-image: url(Assests/navBG.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 6px 25px;
+    text-align: center;
+    border: 1px solid white;
+    
+
+}
+.nav ul li:hover{
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgb(2, 213, 255);
+    /* border: var(--border); */
+    color: rgb(4, 255, 50);
+}
+.nav a{
+    font-size: 20px;
+    
+    text-decoration: none;
+    color: rgb(255, 255, 255);    
+}
+.nav a:hover , .nav button:hover{
+    color: rgb(4, 255, 50);
+    transition: 0.3s ease-in-out;
+    
+}
+.nav button{
+    background: transparent;
+    border: none;
+    font: var(--font3);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.profile{
+    border: var(--border);
+    
+    z-index: 1;
+    transform: translate(30%, 40%);
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    cursor: var(--cursor);
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateY(0%);
+    cursor: pointer;
+    box-shadow: var(--bshadow);
+}
+.profile img:hover{
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.content{
+    position: absolute;
+    top: 1%;
+    left: 35%;
+    transform: translate(10%, 90%);
+    text-align: center;
+    color: white;
+    /* z-index: 1; */
+}
+.content h1{
+    font-family: var(--font2);
+    font-size: 60px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(4, 255, 226);
+}
+
+.content p{
+    font-family: var(--font3);
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    margin-top: 20px;
+    max-width: 500px;
+    text-align: center;
+    color: rgb(46, 4, 255);
+    margin-left: 15%;
+}
+.content button{
+    width: 210px;
+    height: 40px;
+    border-radius: var(--bradius);
+    border: var(--border);
+    background-color: rgb(28, 204, 31);
+    color: white;
+    font-family: var(--font3);
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    cursor: var(--cursor);
+    margin-top: 18px;
+    margin-left: 25px;
+}
+.content button:hover{
+    background-color: rgb(4, 201, 255);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1); /* transparent glass feel */
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  left: 25%;
+  border-radius: var(--bradius);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+/* .baate{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-40%, 700%); 
+} */
+.baate button{
+    width: 150px;
+    height: 40px;
+    border-radius: var(--bradius);
+    border: var(--border);
+    background-color: rgb(30, 219, 90);
+    color: white;
+    font-family: var(--font3);
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    cursor: var(--cursor);
+    margin-top: 45px;
+    left: 56%;
+    position: absolute;
+}
+.baate button:hover{
+    background-color: rgb(4, 201, 255);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+.overlay{
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    
+
+}
+
+.overlayActive{
+    opacity: 1;
+    pointer-events: initial;
+    
+}
+
+/* show my card section  */
+.card , .kuchBaate {
+    display: none;
+}
+.cardActive , .kuchBaateActive  {
+    display: flex; 
+    
+}
+
+.card img{
+    width: 600px;
+    left: 30%;
+    transform: translate(10% , -60%);
+    position: absolute;
+    border-radius: var(--bradius);
+    box-shadow: 2px 2px 5px black;
+    
+}
+
+
+
+.card #closeBtn , .kuchBaate  #closeBtn , .searchBtn #closeBtn{
+    font-size: 25px;
+    right: 3%;
+    top: 5%;
+    padding: 5px 10px ;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    border: var(--border);
+    
+}
+.card #closeBtn:hover , .kuchBaate  #closeBtn:hover , .searchBtn #closeBtn:hover{
+    box-shadow: 2px 2px 5px red;
+    transition: 0.4s ease-in-out;
+    background-color: aqua;
+    border: 1px solid red;
+    scale: 1.1;
+}
+
+.card #flipCard {
+    position: relative;
+    padding: 6px 12px ;
+    border-radius: var(--bradius);
+    font-size: 18px;
+    left: 50%;
+    transform: translateY(500%);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 1px dotted red ;
+    background-color: rgb(153, 255, 0);
+    font-family: var(--font3);
+    letter-spacing: 1.3px;
+    
+
+}
+.card #flipCard:hover{
+    box-shadow: 2px 2px 10px aqua;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+
+.front, .back {
+  left: 33%;
+  position: absolute;
+  transition: transform 0.8s ease-in-out;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  
+}
+
+.front  {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.back  {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* Apply flip */
+.card.flipped .front , .kuchBaate.flipped .front{
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.card.flipped .back  , .kuchBaate.flipped .back{
+  transform: rotateY(360deg);
+  z-index: 2;
+}
+
+/* kuch Baate quotes  */
+
+.kuchBaate img{
+    width: 600px;
+    height: 420px;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 30%;
+    border-radius: var(--bradius);
+    transform: translate(-5px ,-250px);
+    box-shadow: 2px 2px 5px black;
+   
+}
+.kuchBaate #flipCard{
+    position: absolute;
+    padding: 6px 12px;
+    transform: translateY(200px);
+    left: 45%;
+    border-radius: var(--bradius);
+    font-size: 18px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 1px dotted red ;
+    background-color: rgb(153, 255, 0);
+    font-family: var(--font3);
+    letter-spacing: 1.3px;
+    
+}
+.kuchBaate #flipCard:hover{
+    box-shadow: 2px 2px 10px aqua;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+
+/* Search My Partner section   */
+
+.searchBtn{
+    position: absolute;
+    top: 0%;
+    visibility: hidden;
+    left: 33%;
+    max-width: 650px;
+    /* border: var(--border); */
+    width: 100%;
+    backdrop-filter: var(--blur);
+    position: fixed;
+    
+}
+.searchBtnActive{
+    visibility: visible;
+}
+.searchBtn video{
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: var(--bradius);
+    box-shadow: 5px 5px 10px black;
+    transform: translateY(-50px);
+
+}
+.searchBtn h1{
+    color: rgb(255, 0, 0);
+    transform: translate(23%);
+    font-family: var(--font3);
+    letter-spacing: 2.5px;
+    margin-top: 15px;
+}
+.searchBtn input{
+    width: 70%;
+    padding: 5px 10px ;
+    font-size: 22px;
+    color: blue;
+    border-radius:18px 0px 0px 18px ;
+    border:1px solid rgb(25, 0, 255);
+    margin-left: 40px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgb(40, 2, 255);
+    text-align: center;
+    outline: none;
+    text-transform: capitalize;
+}
+.searchBtn input:hover{
+    border: 1px solid red;
+}
+.searchBtn #search {
+    width: 100px;
+    height: 36px;
+    border: none;
+    background-color: rgb(21, 222, 78);
+    border-radius: 0px 18px 18px 0px ;
+    transform: translate(-30px , 6px);
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;
+}
+.searchBtn #search img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    transform: translate(-8px , 1px);
+    
+    border: none;
+}
+.searchBtn #search:hover{
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    background-color: rgb(65, 60, 210);
+}
+.foundPartner , .notFoundPartner  {
+    width: 500px;
+    border-radius: var(--bradius);
+    margin-top: 100px;
+    transform: translateX(-85px);
+    cursor: pointer;
+    box-shadow: 2px 2px 10px black;
+    visibility: hidden;
+    
+}
+.foundPartner:hover , .notFoundPartner:hover{
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+}
+.foundPartnerActive{
+    visibility: visible;
+    
+}
+.notFoundImgActive{
+    visibility: visible;
+}
+
+@media (max-width:450px){
+    body{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    video{
+        width: 100%;
+        height: 100vh;
+        object-fit: fill;
+    }
+    
+    .logo{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 45px;
+    padding: 3px 10px;
+  }
+
+  #logoImg{
+    width: 50px;
+    left: 0;
+    top: 2%;
+  }
+  .nav{
+    transform: translate(15px , 3px );
+    position: absolute;
+    visibility: hidden;
+    z-index: 2;
+  }
+
+
+  
+  .nav ul{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    top: 0%;
+    transform: translate(-42%, -1%);
+    gap: 15px;
+    background: linear-gradient(130deg , aqua , rgb(108, 173, 108) , pink , red);
+    padding: 30px;
+    border-radius: 0px 0px 28px 28px ;
+    box-shadow: 10px 30px 50px black;
+    z-index: 1;
+  }
+
+
+
+  #navClickMeBtn{
+    display: flex;
+    width: 60px;
+    z-index: 1;
+    right: 1%;
+    transform: translateY(-5px);
+    position: absolute;
+  }
+
+  .profile{
+    transform: translate(15%, 20%);
+    width: 300px;
+    height: 300px;
+  }
+  .content{
+    width: 350px;
+    transform: translate(-32%, 185%);
+    
+  }
+  .content h1{
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    color: red;
+  }
+  .content p{
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top:10px ;
+  }
+  .content button{
+    font-size: 18px;
+    width: 190px;
+    transform: translateX(-20px);
+  }
+  .baate button{
+    transform: translate(-75%, 615%);
+    /* left: 30%;
+    margin-top: 76%; */
+  }
+  footer{
+    width: 70%;
+    padding: 10px ;
+    font-size: 11px;
+    left: 55px;
+  }
+  .card img{
+    width: 330px;
+
+    transform: translate(-31% , -30%);
+  } 
+  .card #flipCard {
+    left: 35%;
+  } 
+  .kuchBaate img{
+    width: 350px;
+    transform: translate(-31% , -40%);
+    
+  }
+  .kuchBaate #flipCard{
+    transform: translate(-70px , 280px);
+  }
+ .searchBtn{
+    left: 0%;
+    width: 100%;
+ }
+ .searchBtn video{
+    transform: translateY(-80px);
+ }
+ .searchBtn h1{
+    font-size: 30px;
+    margin-top: 10%;
+    transform: translate(5% , 10px);
+    
+ }
+ .searchBtn input{
+    font-size: 17px;
+    transform: translate(-9% , 10px);
+ }
+ .searchBtn #search{
+    width: 70px;
+    height: 30px;
+    transform: translate(-30px , 15px);
+ }
+ .searchBtn #search img{
+    width: 25px;
+    height: 25px;
+    transform: translate(-3px , 2px);
+ }
+ .searchBtn #closeBtn{
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    transform: translate(5px , 2px);
+ }
+ .foundPartner  {
+    width: 330px;
+    transform: translateX(25px);
+ }
+ .notFoundPartner{
+    width: 330px;
+    
+    transform: translate(25px , -300px);
+ }
+}
+
+@media (min-width:451px) and (max-width:800px){
+
+    body{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    video{
+        width: 100%;
+        height: 100vh;
+        object-fit: fill;
+    }
+
+    .logo{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 75px;
+    padding: 5px 15px;
+  }
+
+  #logoImg{
+    width: 80px;
+    left: 0;
+    top: 2%;
+  }
+  .nav{
+    transform: translate( 365px);
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+
+  
+  .nav ul{
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    top: 0%;
+    transform: translate(-42%, -1%);
+
+    background: linear-gradient(130deg , aqua , rgb(108, 173, 108) , pink , red);
+    padding: 50px;
+    border-radius: 0px 0px 28px 28px ;
+    box-shadow: 10px 30px 50px black;
+    z-index: 1;
+  }
+
+
+
+  #navClickMeBtn{
+    display: flex;
+    width: 80px;
+    z-index: 10;
+    right: 1%;
+    transform: translateY(-5px);
+    position: absolute;
+  }
+  .profile{
+    transform: translate(55%, 40%);
+  }
+  .content{
+    width: 600px;
+    transform: translate(-32%, 275%);
+    
+  }
+  .content h1{
+    font-size: 48px;
+    letter-spacing: 1px;
+    color: red;
+  }
+  .content p{
+    font-size: 28px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top:10px ;
+  }
+  .content button{
+    transform: translateX(-20px);
+  }
+  .baate button{
+    transform: translate(-85%, 885%);
+    /* left: 30%; */
+    /* margin-top: 58%;  */
+  }
+  footer{
+    width: 70%;
+    padding: 10px ;
+    font-size: 11px;
+    left: 55px;
+  }
+  .card img{
+    width: 550px;
+
+    transform: translate(-31% , -30%);
+  } 
+  .card #flipCard {
+    left: 40%;
+    margin-top: 20%;
+  } 
+  .kuchBaate img{
+    width: 550px;
+    transform: translate(-31% , -40%);
+    
+  }
+  .kuchBaate #flipCard{
+    transform: translate(-70px , 280px);
+  }
+ .searchBtn{
+    left: 1%;
+    width: 100%;
+ }
+ .searchBtn video{
+    transform: translateY(-130px);
+ }
+ .searchBtn h1{
+    /* font-size: 30px; */
+    margin-top: 10%;
+    transform: translate(18% , 10px);
+    
+ }
+ .searchBtn input{
+    font-size: 20px;
+    transform: translate(-1% , 20px);
+ }
+ .searchBtn #search{
+    width: 95px;
+    height: 34px;
+    transform: translate(-28px , 25px);
+ }
+ .searchBtn #search img{
+    width: 28px;
+    height: 28px;
+    transform: translate(-5px , 2px);
+ }
+ .searchBtn #closeBtn{
+    /* font-size: 20px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    transform: translate(5px , 5px);
+ }
+ .foundPartner  {
+    /* width: 330px; */
+    transform: translateX(65px);
+ }
+ .notFoundPartner{
+    /* width: 330px; */
+    
+    transform: translate(65px , -350px);
+ }
+    
+}
+@media (min-width:801px) and (max-width:1200px){
+    body{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    video{
+        width: 100%;
+        height: 100vh;
+        object-fit: fill;
+    }
+
+    #logoImg{
+    width: 110px;
+    left: 0;
+    top: 2%;
+  }
+
+  .logo{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 115px;
+    padding: 5px 15px;
+  }
+  .nav{
+    transform: translate( 365px);
+    position: absolute;
+    right: 4%;
+    visibility: hidden;
+    /* max-width: 500px;
+    width: 100%; */
+    z-index: 999;
+  }
+
+
+  
+  .nav ul{
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    top: 0%;
+    transform: translate(-42%, -1%);
+
+    background: linear-gradient(130deg , aqua , rgb(108, 173, 108) , pink , red);
+    padding: 50px;
+    border-radius: 0px 0px 28px 28px ;
+    box-shadow: 10px 30px 50px black;
+    z-index: 1;
+  }
+
+
+
+  #navClickMeBtn{
+    display: flex;
+    width: 130px;
+    z-index: 10;
+    right: 0%;
+    transform: translateY(-18%);
+    position: absolute;
+  }
+   .profile{
+    transform: translate(10%, 60%);
+   }
+   .content{
+    width: 600px;
+    transform: translate(7%, 130%);
+    
+  }
+
+    .content h1{
+    font-size: 48px;
+    letter-spacing: 1px;
+   
+  }
+  .content p{
+    /* font-size: 28px; */
+    text-align: center;
+    margin-left: 40px;
+    margin-top:10px ;
+  }
+  .content button{
+    transform: translateX(-20px);
+  }
+  .baate button{
+    transform: translate(18%, 185%);
+    /* left: 30%; */
+    /* margin-top: 58%;  */
+  }
+  .card img{
+    /* width: 550px; */
+
+    transform: translate(-21% , -30%);
+  }
+  .card #flipCard {
+    left: 45%;
+    margin-top: 12%;
+  }
+  .card #closeBtn , .kuchBaate  #closeBtn{
+    top: 10%;
+  }
+  .kuchBaate img{
+    /* width: 550px; */
+    transform: translate(-21% , -30%);
+    
+  }
+  .kuchBaate #flipCard{
+    transform: translate(-70px , 330px);
+  }
+  .searchBtn{
+    left: 20%;
+    width: 100%;
+ }
+ .searchBtn video{
+    transform: translateY(-130px);
+ }
+ 
+
+ 
+ .searchBtn #search img{
+    /* width: 28px;
+    height: 28px; */
+    transform: translate(-5px , 2px);
+ }
+ .searchBtn #closeBtn{
+
+    transform: translate(5px , -35px);
+ }
+ .foundPartner  {
+    /* width: 330px; */
+    transform: translateX(70px);
+ }
+ .notFoundPartner{
+    /* width: 330px; */
+    
+    transform: translate(70px , -380px);
+ }
+}
+
+@media (min-width:1201px) and (max-width:1500px){
+    .baate button{
+    transform: translate(45%, 15%);
+    /* left: 30%; */
+    /* margin-top: 58%;  */
+  }
+}
+@media (min-width:1501px) and (max-width:1800px){
+    .baate button{
+    transform: translate(45%, 15%);
+    /* left: 30%; */
+    /* margin-top: 58%;  */
+  }
+  .card img{
+    /* width: 550px; */
+
+    transform: translate(-10% , -70%);
+  }
+  .card #flipCard {
+    left: 45%;
+    margin-top: -1%;
+  }
+  .kuchBaate img{
+    /* width: 550px; */
+    transform: translate(-1% , -70%);
+    
+  }
+  .kuchBaate #flipCard{
+    transform: translate(10px , 180px);
+  }
+  .foundPartner  {
+    /* width: 330px; */
+    transform: translateX(70px);
+ }
+ .notFoundPartner{
+    /* width: 330px; */
+    
+    transform: translate(70px , -380px);
+ }
+}

@@ -1,0 +1,1124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&family=Protest+Riot&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --bradius: 18px;
+    --bshadow: 2px 2px 10px white;
+    --border: 1px solid white;
+    --cursor: pointer;
+    --font: 'Poppins', sans-serif;
+    --font2: 'Protest Guerrilla', sans-serif;
+    --font3:"Protest Riot", sans-serif;
+    --blur: blur(10px);
+    --transition: 0.3s ease-in;
+}
+
+.logo{
+    
+    color: rgb(4, 255, 63);
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: var(--font3);
+    font-weight: 300;
+    font-size: 18px;
+    padding: 6px 15px;
+    letter-spacing: 1.5px;
+    border-radius: var(--bradius);
+}
+
+.logo:hover{
+    color: rgb(4, 201, 255);
+    transition: 0.4s ease-in-out;
+    box-shadow: var(--bshadow);
+    
+}
+
+img{
+    width: 200px;
+    right: 0;
+    position: absolute;
+    transform: translate(-1%, -25%);
+    cursor: pointer;
+}
+#navClickMeBtn{
+  display: none;
+}
+#closeNavBar {
+    font-size: 13px;
+    right: 2%;
+    top: 0.5%;
+    padding: 5px 10px ;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    border: var(--border);
+    display: none;
+    z-index: 1000;
+}
+
+#closeNavBar:hover{
+    box-shadow: 2px 2px 5px red;
+    transition: 0.4s ease-in-out;
+    /* background-color: aqua; */
+    border: 1px solid red;
+    scale: 1.01;
+}
+
+.njProfile{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(Assests/wallpaper2.jpg);
+  /* min-height: 100vh; */
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; 
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  position: fixed; */
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    width: 680px;
+    position: sticky;
+    transform: translate(75%, -40%);
+
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 30px;
+    transform: translate(0, 100%);
+}
+.nav ul li{
+    font-family: var(--font3);
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: white;
+    cursor: var(--cursor);
+    border-radius: var(--bradius);
+    border: var(--border);
+    /* background-image: url(Assests/navBG.jpg); */
+    /* background-size: cover;
+    background-position: center; */
+    padding: 6px 25px;
+    text-align: center;
+    border: 1px solid white;
+    box-shadow: 2px 2px 7px white;
+    
+
+}
+.nav ul li:hover{
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgb(2, 221, 255);
+    /* border: var(--border); */
+    color: rgb(4, 255, 50);
+}
+.nav a{
+    font-size: 20px;
+    
+    text-decoration: none;
+    color: rgb(255, 255, 255);    
+}
+.nav a:hover , .nav button:hover{
+    color: rgb(255, 4, 222);
+    transition: 0.3s ease-in-out;
+    
+}
+.nav button{
+    background: transparent;
+    border: none;
+    font: var(--font3);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile{
+    border: var(--border);
+    
+    z-index: 1;
+    transform: translate(30%, 40%);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    cursor: var(--cursor);
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateY(0%);
+    cursor: pointer;
+    box-shadow: var(--bshadow);
+}
+.profile img:hover{
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+#congratsSection{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: none;
+}
+#congratsSection video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+#closeBtn{
+    font-size: 25px;
+    right: 3%;
+    top: 5%;
+    padding: 5px 10px ;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    border: var(--border);
+}
+#closeBtn:hover{
+    box-shadow: 2px 2px 5px red;
+    transition: 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid red;
+    scale: 1.1;
+}
+.text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-align: center;
+  animation: textPop 0.8s ease;
+  line-height: 4rem;
+  cursor: pointer;
+  /* font-family: var(--font3); */
+}
+
+@keyframes textPop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1.2); opacity: 1; }
+}
+
+.content{
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    transform: translate(10%, 70%);
+    text-align: center;
+    
+}
+.content h1{
+    font-family: var(--font3);
+    font-size: 70px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+#verify{
+    width: 80px;
+    transform: translate(80px , 13px);
+}
+
+/* .content p{
+    font-family: var(--font3);
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    margin-top: 20px;
+    max-width: 500px;
+    text-align: center;
+    color: rgb(46, 4, 255);
+    margin-left: 15%;
+} */
+.content .btn{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    transform: translate(50px , 50px);
+    width: 550px;
+    grid-gap: 20px;
+    
+}
+.content .btn button{
+    padding: 8px 15px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font3);
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 25px;
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #ff6ec4, #7873f5, #4ef2d9);
+    border-image-slice: 1;
+    background: black;
+}
+.content button:hover{
+    background-color: rgb(4, 201, 255);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    border: 1px solid rgb(0, 255, 21);
+    border-radius: var(--bradius);
+}
+
+.typing-container {
+  /* margin-top: 20px; */
+  transform: translate(75px, 20px);
+  font-size: 2rem;
+  font-weight: bold;
+  color: greenyellow;
+  font-family: var(--font3);
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+}
+
+#static{
+    color: aqua;
+    margin-right: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: rgb(55, 0, 255);
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1); /* transparent glass feel */
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  left: 25%;
+  border-radius: var(--bradius);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
+}
+.overlay{
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+
+}
+
+.overlayActive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.socialMediaHandle{
+    width: 800px;
+    border: var(--border);
+    position: absolute;
+    right: 13%;
+    transform: translate(90px,95px);
+    height: 170px;
+    border-radius: var(--bradius);
+    backdrop-filter: var(--blur);
+    box-shadow: 2px 2px 10px black;
+    display: none;
+}
+
+
+.socialMediaHandle a img{
+    width: 90px;
+    position: relative;
+    margin-right: 30px;
+    transform: translate(40px , 40px);
+    border-radius: 30%;
+
+}
+.socialMediaHandle a img:hover{
+    scale: 1.1;
+    transition: var(--transition);
+    
+}
+
+#closeBtnSocialMedia{
+    font-size: 15px;
+    right: 0%;
+    top: 0%;
+    padding: 5px 10px ;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    border: var(--border);
+}
+#closeBtnSocialMedia:hover{
+    box-shadow: 2px 2px 5px red;
+    transition: 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid red;
+    scale: 1.05;
+}
+
+.card{
+    display: none;
+}
+.card img{
+    right: 17%;
+    width: 450px;
+    bottom: -1%;
+    border-radius: var(--bradius);
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;
+}
+.card img:hover{
+    transition: var(--transition);
+    scale: 1.05;
+}
+
+#cardCloseBtn{
+    font-size: 15px;
+    right: 17%;
+    transform: translate(60px, 60px);
+    padding: 5px 10px ;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    border: var(--border);
+}
+#cardCloseBtn:hover{
+    box-shadow: 2px 2px 5px red;
+    transition: 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid red;
+    scale: 1.02;
+}
+
+
+/* Password section  */
+
+.password{
+    background-image: url(Assests/passwordBG.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.securityVideo , .unlockVideo , .lockkVideo{
+    width: 300px;
+    height: 300px;
+    z-index: 999;
+    position: absolute;
+    top: 5%;
+    border-radius: 50%;
+    transform: translateX(35%);
+}
+.securityVideo video , .unlockVideo video , .lockkVideo video{
+    object-fit: cover;
+    z-index: -1;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+
+.passwordBox {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-align: center;
+  animation: textPop 0.8s ease;
+  line-height: 4rem;
+  /* font-family: var(--font3); */
+}
+
+@keyframes textPop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1.2); opacity: 1; }
+}
+
+.passwordBox h1 img{
+    width: 50px;
+    position: relative;
+    transform: translate(15px , 15px);
+
+}
+
+.passwordBox input{
+    font-size: 22px;
+    border-radius: var(--bradius);
+    padding: 10px 20px ;
+    width: 80%;
+    color: blue;
+    /* text-transform: capitalize; */
+    text-align: center;
+    outline: none;
+}
+
+.passwordBox button{
+    padding: 8px 15px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font3);
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 25px;
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #ff6ec4, #7873f5, #4ef2d9);
+    border-image-slice: 1;
+    background: black;
+}
+.passwordBox button:hover{
+    background-color: rgb(4, 201, 255);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    border: 1px solid rgb(0, 255, 21);
+    border-radius: var(--bradius);
+}
+
+.rightPassword , .wrongPassword{
+    display: none;
+}
+
+.rightPasswordBox {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-align: center;
+  animation: textPop 0.8s ease;
+  line-height: 2rem;
+}
+
+@keyframes textPop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1.2); opacity: 1; }
+}
+
+.rightPasswordBox h1{
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.rightPasswordBox h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.rightPasswordBox h3{
+    font-size: 22px;
+}
+.rightPasswordBox h4{
+    font-size: 18px;
+}
+
+.wrongPasswordBox {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-align: center;
+  animation: textPop 0.8s ease;
+  line-height: 2rem;
+}
+
+@keyframes textPop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1.2); opacity: 1; }
+}
+
+.wrongPasswordBox  h1{
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.wrongPasswordBox  h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.wrongPasswordBox  h3{
+    font-size: 23px;
+}
+
+@media (max-width:500px){
+    .njProfile{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+  .logo{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 45px;
+    padding: 3px 10px;
+  }
+
+  #logoImg{
+    width: 50px;
+    left: 0;
+    top: 2%;
+  }
+  
+  .nav{
+    transform: translate(15px , 3px );
+    position: absolute;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+  .nav ul{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    top: 0%;
+    transform: translate(-42%, -1%);
+    gap: 15px;
+    background: linear-gradient(130deg , aqua , rgb(108, 173, 108) , pink , red);
+    padding: 30px;
+    border-radius: 0px 0px 28px 28px ;
+    box-shadow: 10px 30px 50px black;
+    z-index: 1;
+  }
+
+  #navClickMeBtn{
+    display: flex;
+    width: 60px;
+    z-index: 10;
+    right: 1%;
+    transform: translateY(-5px);
+    position: absolute;
+  }
+  .profile{
+    width: 300px;
+    height: 300px;
+    transform: translate(13%, 25%);
+  }
+  #congratsSection{
+    width: 100%;
+    height: 100%;
+   
+    
+    
+  }
+  #congratsSection video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+  .text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px ;
+  line-height: 3rem;
+}
+  .content{
+    position: relative;
+    top: -3%;
+  }
+  .content h1{
+    font-size: 30px;
+    transform: translateX(55px);
+    backdrop-filter: var(--blur);
+    width: 90%;
+    border-radius: var(--bradius);
+  }
+  #verify{
+    width: 40px;
+    transform: translate(-1px , 1px);
+  }
+  .content .btn{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    transform: translate(75px , 50px);
+    width: 330px;
+    grid-gap: 10px;
+  }
+  .content .btn button{
+    padding: 8px 10px;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    margin-right: 25px;
+    
+}
+.typing-container {
+  /* margin-top: 20px; */
+  transform: translate(115px, 20px);
+  font-size: 22px;
+  letter-spacing: 1.5px;
+}
+footer{
+   
+    width: 70%;
+    padding: 10px ;
+    font-size: 11px;
+    left: 55px;
+  }
+  .socialMediaHandle{
+    width: 300px;
+    transform: translate(10px,165px);
+    height: 60px;
+}
+.socialMediaHandle a img{
+    width: 30px;
+    position: relative;
+    margin-right: 10px;
+    transform: translate(15px , 12px);
+    border-radius: 30%;
+
+}
+#closeBtnSocialMedia{
+    font-size: 10px;
+    padding: 5px 10px ;
+    border: none;
+}
+.card{
+    width: 500px;
+    /* border: var(--border); */
+    height: 230px;
+    backdrop-filter: var(--blur);
+    z-index: -1;
+    border-radius: var(--bradius);
+    transform: translateY(15px);
+}
+.card img{
+    transform: translate(-53px , -25px);
+    width: 330px;
+    z-index: 1;
+   
+}
+#cardCloseBtn{
+    font-size: 12px;
+    transform: translate(-40px, -12px);
+    z-index: 1;
+}
+.password{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.securityVideo {
+    transform: translateX(-7%);
+}
+.passwordBox {
+  font-size: 12px;
+  padding: 10px ;
+  width: 80%;
+  margin-top: 30px;
+}
+.passwordBox h1 img{
+    width: 30px;
+    transform: translate(10px , 10px);
+}
+.passwordBox input{
+    font-size: 15px;
+    padding: 7px 20px ;
+    width: 90%;
+    transform: translateY(-15px);
+    /* text-transform: capitalize; */
+}
+.passwordBox button{
+    transform: translateY(-15px);
+}
+.rightPasswordBox{
+  width: 80%;
+  transform: translate(35px , 30px);
+  padding: 20px;
+}
+.rightPasswordBox h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.rightPasswordBox h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: aqua;
+}
+.rightPasswordBox h3{
+    font-size: 18px;
+}
+.rightPasswordBox h4{
+    font-size: 13px;
+    margin-top: 8px;
+}
+.unlockVideo video{
+    transform: translateX(-17%);
+}
+.wrongPasswordBox {
+    width: 110%;
+  transform: translate(-10px , 30px);
+  padding: 20px;
+}
+.lockkVideo video{
+    transform: translateX(-35%);
+}
+.wrongPasswordBox  h1{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.wrongPasswordBox  h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.wrongPasswordBox  h3{
+    font-size: 23px;
+}
+    
+}
+
+@media (min-width:501px) and (max-width:800px){
+    .njProfile{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    .logo{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 75px;
+    padding: 5px 15px;
+  }
+
+  #logoImg{
+    width: 80px;
+    left: 0;
+    top: 2%;
+  }
+  .nav{
+    transform: translate( 365px);
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+
+  
+  .nav ul{
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    top: 0%;
+    transform: translate(-42%, -1%);
+
+    background: linear-gradient(130deg , aqua , rgb(108, 173, 108) , pink , red);
+    padding: 50px;
+    border-radius: 0px 0px 28px 28px ;
+    box-shadow: 10px 30px 50px black;
+    z-index: 1;
+  }
+
+
+
+  #navClickMeBtn{
+    display: flex;
+    width: 80px;
+    z-index: 10;
+    right: 1%;
+    transform: translateY(-5px);
+    position: absolute;
+  }
+  .profile{
+    transform: translate(28%, 38%);
+  }
+  #congratsSection{
+    width: 100%;
+    height: 100%;
+   
+    
+    
+  }
+  #congratsSection video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+  .content{
+    position: relative;
+    top: 3%;
+  }
+  .content h1{
+    font-size: 50px;
+    transform: translateX(55px);
+    backdrop-filter: var(--blur);
+    width: 90%;
+    border-radius: var(--bradius);
+  }
+  #verify{
+    width: 65px;
+    transform: translate(-25px , 1px);
+  }
+  .content .btn{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    transform: translate(115px , 50px);
+    /* width: 480px; */
+    grid-gap: 10px;
+  }
+.typing-container {
+  /* margin-top: 20px; */
+  transform: translate(195px, 20px);
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+.socialMediaHandle{
+    width: 500px;
+    transform: translate(-30px,265px);
+    height: 80px;
+}
+.socialMediaHandle a img{
+    width: 60px;
+    position: relative;
+    margin-right: 10px;
+    transform: translate(15px , 10px);
+    border-radius: 30%;
+
+}
+#closeBtnSocialMedia{
+    font-size: 18px;
+    padding: 5px 10px ;
+    /* border: none; */
+}
+.card{
+    /* width: 650px; */
+    /* border: var(--border); */
+    height: 270px;
+    backdrop-filter: var(--blur);
+    z-index: -1;
+    border-radius: var(--bradius);
+    transform: translateY(115px);
+}
+.card img{
+    transform: translate(-53px , -15px);
+    width: 430px;
+    z-index: 1;
+   
+}
+#cardCloseBtn{
+    font-size: 18px;
+    transform: translate(10px, -20px);
+    z-index: 1;
+}
+.password{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+ 
+}
+
+@media (min-width:801px) and (max-width:1200px){
+     .njProfile{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    #logoImg{
+    width: 110px;
+    left: 0;
+    top: 2%;
+  }
+
+  .logo{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 115px;
+    padding: 5px 15px;
+  }
+  .nav{
+    transform: translate( 365px);
+    position: absolute;
+    right: 4%;
+    visibility: hidden;
+    /* max-width: 500px;
+    width: 100%; */
+    z-index: 999;
+  }
+
+
+  
+  .nav ul{
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    top: 0%;
+    transform: translate(-42%, -1%);
+
+    background: linear-gradient(130deg , aqua , rgb(108, 173, 108) , pink , red);
+    padding: 50px;
+    border-radius: 0px 0px 28px 28px ;
+    box-shadow: 10px 30px 50px black;
+    z-index: 1;
+  }
+
+
+
+  #navClickMeBtn{
+    display: flex;
+    width: 130px;
+    z-index: 10;
+    right: 0%;
+    transform: translateY(-18%);
+    position: absolute;
+  }
+  .profile{
+    transform: translate(88%, 40%);
+  }
+  #congratsSection{
+    width: 100%;
+    height: 100%;
+  }
+  #congratsSection video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+  .content{
+    position: relative;
+    top: 3%;
+  }
+  .content h1{
+    transform: translateX(135px);
+  }
+  #verify{
+    transform: translate(-185px , 10px);
+  }
+    .content .btn{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    transform: translate(415px , 50px);
+  }
+  .typing-container {
+  transform: translate(495px, 20px);
+}
+.socialMediaHandle{
+    width: 650px;
+    transform: translate(-80px,285px);
+    height: 110px;
+}
+.socialMediaHandle a img{
+    width: 80px;
+    position: relative;
+    margin-right: 10px;
+    transform: translate(15px , 10px);
+    border-radius: 30%;
+
+}
+.card{
+    width: 650px;
+    height: 270px;
+    backdrop-filter: var(--blur);
+    z-index: -1;
+    border-radius: var(--bradius);
+    transform: translate(280px , 135px);
+}
+.card img{
+    transform: translate(-23px , -10px);
+    width: 450px;
+    z-index: 1;
+   
+}
+#cardCloseBtn{
+    /* font-size: 18px; */
+    transform: translate(40px, -20px);
+    /* z-index: 1; */
+}
+
+}
+
+@media (min-width:1501px) and (max-width:1800px){
+    .card{
+    width: 650px;
+    height: 320px; 
+    backdrop-filter: var(--blur);
+    z-index: -1;
+    border-radius: var(--bradius);
+    transform: translate(700px , -85px);
+}
+.card img{
+    transform: translate(-23px , -30px);
+    width: 450px;
+    z-index: 1;
+   
+}
+#cardCloseBtn{
+
+    transform: translate(40px, 10px);
+
+}
+.socialMediaHandle{
+    width: 650px;
+    transform: translate(-60px,85px);
+    height: 130px;
+}
+.socialMediaHandle a img{
+    width: 80px;
+    position: relative;
+    margin-right: 10px;
+    transform: translate(20px , 15px);
+    border-radius: 30%;
+
+}
+.passwordBox , .rightPasswordBox , .wrongPasswordBox{
+  margin-top: 45px;
+}
+}
